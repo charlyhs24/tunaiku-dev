@@ -1,0 +1,79 @@
+<form [formGroup]="CreateSliderForm" (ngSubmit)="onSubmit()">
+    <div class="item-3">
+        <mat-card class="loan-slider">
+            <div class="Grids margin-bottom-25">
+                <div class="Grid-6 Grid-sm-6 Grid-lg-6 Grid-xl-6">
+                    <div class="text-left">
+                        <span><strong>Jumlah Pinjaman</strong></span>
+                    </div>
+                </div>
+                <div class="Grid-6 Grid-sm-6 Grid-lg-6 Grid-xl-6">
+                    <div class="text-right">
+                        <span class="Color-primary"><strong>{{CreateSliderForm.value.LoanAmount}} Juta</strong></span>
+                    </div>
+                </div>
+                <div class="Grid-12">
+                    <div class="Field-control">
+                        <input type="range" min="2" max="20" formControlName="LoanAmount" class="Input">
+                    </div>
+                </div>
+                <div class="Grid-6 Grid-sm-6 Grid-lg-6 Grid-xl-6">
+                    <div class="text-left">
+                        <span>2 juta</span>
+                    </div>
+                </div>
+                <div class="Grid-6 Grid-sm-6 Grid-lg-6 Grid-xl-6">
+                    <div class="text-right">
+                        <span>20 juta</span>
+                    </div>
+                </div>
+            </div>
+            <div class="Grids margin-bottom-50">
+                <div class="Grid-6 Grid-sm-6 Grid-lg-6 Grid-xl-6">
+                    <div class="text-left">
+                        <span><strong>Lama Pinjaman</strong></span>
+                    </div>
+                </div>
+                <div class="Grid-6 Grid-sm-6 Grid-lg-6 Grid-xl-6">
+                    <div class="text-right">
+                        <span class="Color-primary"><strong>{{CreateSliderForm.value.LoanTerm}} Bulan</strong></span>
+                    </div>
+                </div>
+                <div class="Grid-12">
+                    <div class="Field-control">
+                        <input type="range" min="6" max="19" formControlName="LoanTerm" class="Input">
+                    </div>
+                </div>
+                <div class="Grid-6 Grid-sm-6 Grid-lg-6 Grid-xl-6">
+                    <div class="text-left">
+                        <span>6 Bulan</span>
+                    </div>
+                </div>
+                <div class="Grid-6 Grid-sm-6 Grid-lg-6 Grid-xl-6">
+                    <div class="text-right">
+                        <span>20 Bulan</span>
+                    </div>
+                </div>
+            </div>
+            <div class="Grids margin-bottom-25">
+                <div class="Grid-12">
+                    <hr>
+                </div>
+                <div class="Grid-12 margin-bottom-25">
+                    <div class="text-center">
+                        <h4>Cicilan per bulan</h4>
+                        <p>*sudah termasuk bunga dan biaya admin</p>
+                    </div>
+                </div>
+                <div class="Grid-12">
+                    <div class="text-center Color-primary">
+                        <h2>Rp1.089.804</h2>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="Button Button--primary Button--fullWidth">Ajukan Pinjaman</button>
+            </div>
+        </mat-card>
+    </div>
+</form>

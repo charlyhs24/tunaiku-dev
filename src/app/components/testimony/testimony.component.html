@@ -1,0 +1,29 @@
+<div class="testimony-container">
+    <div class="title">
+        <h2>Testimoni Nasabah</h2>
+        <p>Apakah KTA Tunaiku Aman?</p>
+    </div>
+    <div class="card-container">
+        <div class="Flex Flex-grow JustifyContent-center">
+            <div *ngFor="let item of TESTIMONY" class="flex-item">
+                <div class="Card">
+                    <div class="Card-header">
+                      <div class="Flex Flex-row">
+                        <img [src]="item.url_picture" alt="profile-picture">
+                        <div class="description">
+                            <p>{{item.name}}, {{item.age}}</p>
+                            <p><strong>{{item.credit}}</strong></p>
+                        </div>
+                      </div>
+                    </div>
+                    <hr width="100%">
+                    <div class="Card-body">
+                      <p class="Typography-regular14 Color-neutral-80">
+                        {{item.description}}
+                      </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

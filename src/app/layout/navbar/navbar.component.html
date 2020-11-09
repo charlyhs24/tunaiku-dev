@@ -1,0 +1,32 @@
+<mat-toolbar>
+    <img src="assets/tunaiku-logo-color.svg" alt="logo-tunaiku">
+    <div class="menu-container">
+        <a mat-button>Tunaiku Invest</a>
+        <a mat-button [matMenuTriggerFor]="produkMenu">
+            Produk
+            <mat-icon>keyboard_arrow_down</mat-icon>
+        </a>
+        <mat-menu #produkMenu="matMenu">
+            <button mat-menu-item>Nasabah</button>
+            <button mat-menu-item>Referal</button>
+            <button mat-menu-item>Swara</button>
+            <button mat-menu-item>Bisnis</button>
+            <button mat-menu-item>Partner Bisnis</button>
+        </mat-menu>
+        <a mat-button>Tentang Kami</a>
+        <a mat-button>Rilis Media</a>
+        <a mat-button mat-button [matMenuTriggerFor]="PusatBantuanMenu">
+            Pusat Bantuan
+            <mat-icon>keyboard_arrow_down</mat-icon>
+        </a>
+        <mat-menu #PusatBantuanMenu="matMenu">
+            <button mat-menu-item>Tanya Jawab</button>
+            <button mat-menu-item>Cara Pembayaran</button>
+        </mat-menu>
+        <a mat-button>
+            <mat-icon>info</mat-icon>
+            Saran
+        </a>
+    </div>
+    <button class="Button">Masuk</button>
+</mat-toolbar>

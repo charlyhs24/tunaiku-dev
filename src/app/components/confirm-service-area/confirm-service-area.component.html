@@ -1,0 +1,37 @@
+<main class="Content">
+    <div class="mobile-content">
+        <div class="container">
+            <app-mobile-navbar [title]="title"></app-mobile-navbar>
+            <div class="confirm-service-area">
+                <div class="text-center MarginBottom-large">
+                    <img src="assets/service-area.svg" alt="slider">
+                </div>
+                <form [formGroup]="ServiceAreaForm" (ngSubmit)="onSubmit()">
+                    <div class="Grids">
+                        <div class="Grid-12 MarginBottom-large">
+                            <label><strong>Pilih area tempat tinggal Anda di bawah ini !</strong></label>
+                            <mat-radio-group formControlName="city" aria-label="Select an option">
+                                <div class="Field">
+                                    <mat-radio-button value="1">
+                                        <strong>Jawa :</strong><span>Jakarta, Bogor, Depok, Tangerang, Bekasi, Bandung,
+                                            <br>Semarang, Yogyakarta, Gresik, Sidoarjo, Surabaya</span> <br>
+                                        <strong>Sumatra :</strong> <span> Medan, Palembang, Pekanbaru</span><br>
+                                        <strong>Bali :</strong> <span>Denpasar</span> <br>
+                                        <strong>Sulawesi :</strong> <span>Makassar</span> <br>
+                                    </mat-radio-button>
+                                </div>
+                                <div class="Field">
+                                    <mat-radio-button value="2">Di kota lainnya</mat-radio-button>
+                                </div>
+                            </mat-radio-group>
+                        </div>
+                        <div class="Grid-12">
+                            <button
+                                class="Button Button--primary Button--fullWidth color-primarry-30">Lanjutkan</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

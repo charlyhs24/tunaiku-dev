@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@amar-ui-web/core/index.scss';
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+}
+.mobile-content{
+  background-color: #e4e2e2;
+  font-size: 16px;
+  color: #3d3d3d;
+  .container{
+      max-width: 480px;
+      min-height: 100vh;
+      margin: 0 auto;
+      background-color: #ffff;
+  }
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+.text-left{
+  text-align: left;
+}
+.margin-bottom-25{
+  margin-bottom: 25px;
+}
+.margin-bottom-50{
+  margin-bottom: 50px;
+}
+.color-primarry-30{
+  background-color: #48a800;
+  opacity: .5;
+}

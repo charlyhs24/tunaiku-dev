@@ -1,0 +1,17 @@
+.mat-icon {
+  vertical-align: middle;
+}
+.mat-toolbar{
+    background-color: #ffffff;
+    padding-left: 20%;
+    padding-right: 20%;
+    box-shadow: 0 3px 2px 0 rgba(0,0,0,.2);
+    position: sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000;
+}
+.menu-container{
+    padding-left: 25px;
+    padding-right: 25px;
+}
