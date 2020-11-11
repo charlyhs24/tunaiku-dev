@@ -39,55 +39,55 @@
                                         <input type="text" formControlName="FullName" placeholder="e.g John Appleseed"
                                             class="Input"/>
                                     </div>
-                                    <div *ngIf="FullName.errors?.required">
+                                    <div class="Color-danger" *ngIf="FullName.errors?.required">
                                         FullName is required.
                                     </div>
-                                    <div *ngIf="FullName.errors?.maxlength">
+                                    <div class="Color-danger" *ngIf="FullName.errors?.maxlength">
                                         FullName must be at least max 50 characters long.
                                     </div>
-                                    <div *ngIf="FullName.errors?.pattern">
+                                    <div class="Color-danger" *ngIf="FullName.errors?.pattern">
                                         Fullname is alphabet only
                                     </div>
                                 </div>
-    
+
                                 <div class="Field MarginBottom">
                                     <label class="Field-label">Nomor KTP</label>
                                     <div class="Field-control">
                                         <input formControlName="NumberOfKTP" placeholder="" class="Input"/>
                                     </div>
-                                    <div *ngIf="NumberOfKTP.errors?.required">
+                                    <div class="Color-danger" *ngIf="NumberOfKTP.errors?.required">
                                         NumberOfKTP is required.
                                     </div>
-                                    <div *ngIf="NumberOfKTP.errors?.minlength">
+                                    <div class="Color-danger" *ngIf="NumberOfKTP.errors?.minlength">
                                         NumberOfKTP must be at least min 16 characters long.
                                     </div>
-                                    <div *ngIf="NumberOfKTP.errors?.maxlength">
+                                    <div class="Color-danger" *ngIf="NumberOfKTP.errors?.maxlength">
                                         NumberOfKTP must be at least max 16 characters long.
                                     </div>
-                                    <div *ngIf="NumberOfKTP.errors?.pattern">
+                                    <div class="Color-danger" *ngIf="NumberOfKTP.errors?.pattern">
                                         NumberOfKTP is numeric only
                                     </div>
                                 </div>
-    
+
                                 <div class="Field MarginBottom">
                                     <label class="Field-label">Nomor Handphone</label>
                                     <div class="Field-control">
                                         <input formControlName="PhoneNumber" placeholder="" class="Input" />
                                     </div>
-                                    <div *ngIf="PhoneNumber.errors?.required">
+                                    <div class="Color-danger" *ngIf="PhoneNumber.errors?.required">
                                         PhoneNumber is required.
                                     </div>
-                                    <div *ngIf="PhoneNumber.errors?.minlength">
+                                    <div class="Color-danger" *ngIf="PhoneNumber.errors?.minlength">
                                         PhoneNumber must be at least min 9 characters long.
                                     </div>
-                                    <div *ngIf="PhoneNumber.errors?.maxlength">
+                                    <div class="Color-danger" *ngIf="PhoneNumber.errors?.maxlength">
                                         PhoneNumber must be at least max 12 characters long.
                                     </div>
-                                    <div *ngIf="PhoneNumber.errors?.pattern">
+                                    <div class="Color-danger" *ngIf="PhoneNumber.errors?.pattern">
                                         PhoneNumber is numeric only
                                     </div>
                                 </div>
-    
+
                                 <div class="Field MarginBottom">
                                     <label class="Field-label">Dari mana Anda mengetahui Tunaiku?*</label>
                                     <div class="Field-control">
@@ -101,8 +101,8 @@
                                             <option value="internet">Lainnya</option>
                                         </select>
                                     </div>
-                                    <div *ngIf="MediaSource.errors?.required">
-                                        PhoneNumber is required.
+                                    <div class="Color-danger" *ngIf="MediaSource.errors?.required">
+                                      MediaSource is required.
                                     </div>
                                 </div>
                             </div>
