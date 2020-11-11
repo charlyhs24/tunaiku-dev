@@ -1,5 +1,5 @@
 <form [formGroup]="CreateSliderForm" (ngSubmit)="onSubmit()">
-    <div class="item-3">
+    <div class="item-3 alternate-theme">
         <mat-card class="loan-slider">
             <div class="Grids margin-bottom-25">
                 <div class="Grid-6 Grid-sm-6 Grid-lg-6 Grid-xl-6">
@@ -14,7 +14,8 @@
                 </div>
                 <div class="Grid-12">
                     <div class="Field-control">
-                        <input type="range" min="2" max="20" formControlName="LoanAmount" class="Input">
+                        <!-- <input type="range" min="2" max="20" formControlName="LoanAmount" class="Input BgColor-primary"> -->
+                        <mat-slider color="primary" min="2" max="20" formControlName="LoanAmount" class="Input"></mat-slider>
                     </div>
                 </div>
                 <div class="Grid-6 Grid-sm-6 Grid-lg-6 Grid-xl-6">
@@ -41,7 +42,8 @@
                 </div>
                 <div class="Grid-12">
                     <div class="Field-control">
-                        <input type="range" min="6" max="19" formControlName="LoanTerm" class="Input">
+                        <mat-slider color="primary" min="2" max="20" formControlName="LoanTerm" class="Input"></mat-slider>
+                        <!-- <input type="range" min="6" max="19" formControlName="LoanTerm" class="Input"> -->
                     </div>
                 </div>
                 <div class="Grid-6 Grid-sm-6 Grid-lg-6 Grid-xl-6">
@@ -72,7 +74,7 @@
                 </div>
             </div>
             <div>
-                <button type="submit" class="Button Button--primary Button--fullWidth">Ajukan Pinjaman</button>
+                <button [disabled]="CreateSliderForm.invalid" type="submit" class="Button Button--primary Button--fullWidth">Ajukan Pinjaman</button>
             </div>
         </mat-card>
     </div>

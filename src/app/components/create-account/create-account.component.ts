@@ -35,6 +35,7 @@ export class CreateAccountComponent implements OnInit {
   });
   constructor(private loan: LoanService, private route: Router, private navbarService: NavbarService) { }
   get FullName() {
+    console.log(this.CreateAccountForm)
     return this.CreateAccountForm.get('FullName');
   }
   get NumberOfKTP() {
