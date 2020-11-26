@@ -6,13 +6,12 @@ import { NavbarService } from './services/navbar/navbar.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  NavbarStatus:boolean;
-  constructor(private navbarService: NavbarService){
+  NavbarStatus: boolean;
+  constructor(private navbarService: NavbarService) {
   }
   ngOnInit() {
-    this.navbarService.updateNavbarStatus(true);
     this.navbarService.state$.subscribe((state) => {
       this.NavbarStatus = state.NAVIGATION_BAR;
     })
-  }  
+  }
 }

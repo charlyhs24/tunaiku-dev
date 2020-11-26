@@ -31,11 +31,12 @@ export class CreateAccountComponent implements OnInit {
         Validators.maxLength(12),
         Validators.pattern('^[0-9]+$')
       ]),
-    MediaSource: new FormControl('',Validators.required)
+    MediaSource: new FormControl('', Validators.required)
   });
-  constructor(private loan: LoanService, private route: Router, private navbarService: NavbarService) { }
+  constructor(private loan: LoanService, private route: Router, private navbarService: NavbarService) {
+    this.navbarService.updateNavbarStatus(false);
+  }
   get FullName() {
-    console.log(this.CreateAccountForm)
     return this.CreateAccountForm.get('FullName');
   }
   get NumberOfKTP() {
