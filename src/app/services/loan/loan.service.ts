@@ -13,13 +13,18 @@ export class LoanService extends Store<LoanState> {
   addUserData(fullName: string, numberOfKTP: string, phoneNumber: string, mediaSource: string): void {
     this.setState({
       ...this.state,
-      userData: { ...this.state.userData, fullName: fullName, numberOfKTP: numberOfKTP, phoneNumber: phoneNumber, mediaSource: mediaSource }
+      fullName: fullName,
+      numberOfKTP: numberOfKTP,
+      phoneNumber: phoneNumber,
+      mediaSource: mediaSource
     });
   }
-  addLoan(loanAmount: number, loanTerm: number): void {
+  addLoan(loanAmount: number, loanTerm: number, payPerMonth: number): void {
     this.setState({
       ...this.state,
-      loan: { ...this.state, amount: loanAmount, term: loanTerm }
+      loanAmount: loanAmount,
+      loanTerm: loanTerm,
+      payPerMonth: payPerMonth
     });
   }
   addServiceArea(serviceArea: string): void {
@@ -27,5 +32,8 @@ export class LoanService extends Store<LoanState> {
       ...this.state,
       serviceArea: serviceArea
     });
+  }
+  monthlyPaymentCalculation(loanAmount: number, period: number): number {
+    return (loanAmount / period) * 1.04;
   }
 }

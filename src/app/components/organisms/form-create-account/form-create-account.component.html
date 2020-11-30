@@ -1,0 +1,40 @@
+<form [formGroup]="createAccountForm" (ngSubmit)="onSubmit()">
+    <div class="Grids">
+        <div class="Grid-12">
+            <app-input-field inputName="Nama Lengkap" type="text" [controlName]="fullName" labelName="Nama Sesuai KTP"
+                placeholder="e.g John Appleseed">
+            </app-input-field>
+
+            <app-input-field placeholder="please input number KTP" inputName="Nomor KTP" type="tel"
+                [controlName]="numberOfKTP" labelName="Nomor KTP">
+            </app-input-field>
+
+            <app-input-field inputName="Nomor Handphone" type="tel" [controlName]="phoneNumber" placeholder="+62"
+                labelName="Nomor Handphone">
+            </app-input-field>
+
+            <div class="Field MarginBottom">
+                <label class="Field-label">Dari mana Anda mengetahui Tunaiku?*</label>
+                <div class="Field-control">
+                    <select formControlName="MediaSource" class="Input">
+                        <option value="internet">Pilih salah satu</option>
+                        <option value="internet">Internet</option>
+                        <option value="internet">Teman</option>
+                        <option value="internet">Radio</option>
+                        <option value="internet">Selebaran/Brosur</option>
+                        <option value="internet">Televisi</option>
+                        <option value="internet">Lainnya</option>
+                    </select>
+                </div>
+                <div class="Color-danger" *ngIf="mediaSource.errors?.required">
+                    MediaSource is required.
+                </div>
+            </div>
+        </div>
+        <div class="Grid-12">
+            <button [disabled]="createAccountForm.invalid" type="submit"
+                class="Button Button--primary Button--fullWidth color-primarry-30">Lanjut Isi
+                Formulir Pengajuan</button>
+        </div>
+    </div>
+</form>

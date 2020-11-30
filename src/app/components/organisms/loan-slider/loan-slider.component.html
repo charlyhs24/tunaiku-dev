@@ -1,0 +1,32 @@
+<form [formGroup]="createSliderForm" (ngSubmit)="onSubmit()">
+    <div class="item-3 alternate-theme">
+        <mat-card class="loan-slider">
+            <app-tunaiku-slider minVal="2 Juta" maxVal="20 Juta" topLabelName="Jumlah Pinjaman" topLabelValue="Juta"
+                [controlName]="loanAmount" minSlider="2" maxSlider="20">
+            </app-tunaiku-slider>
+            <app-tunaiku-slider minVal="6 Bulan" maxVal="20 Bulan" topLabelName="Lama Pinjaman" topLabelValue="Bulan"
+                [controlName]="loanTerm" minSlider="6" maxSlider="20">
+            </app-tunaiku-slider>
+            <div class="Grids margin-bottom-25">
+                <div class="Grid-12">
+                    <hr>
+                </div>
+                <div class="Grid-12 margin-bottom-25">
+                    <div class="text-center">
+                        <h4>Cicilan per bulan</h4>
+                        <p>*sudah termasuk bunga dan biaya admin</p>
+                    </div>
+                </div>
+                <div class="Grid-12">
+                    <div class="text-center Color-primary">
+                        <h4>Rp{{calculatePayPermonth()}}</h4>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button [disabled]="createSliderForm.invalid" type="submit"
+                    class="Button Button--primary Button--fullWidth">Ajukan Pinjaman</button>
+            </div>
+        </mat-card>
+    </div>
+</form>

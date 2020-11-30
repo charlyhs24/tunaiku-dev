@@ -1,30 +1,27 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ConfirmServiceAreaComponent } from './components/confirm-service-area/confirm-service-area.component';
-import { CreateAccountComponent } from './components/create-account/create-account.component';
-import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { SuccessSubmittedDataComponent } from './components/success-submitted-data/success-submitted-data.component';
 
 const routes: Routes = [
-  { path: '',
+  {
+    path: '',
     redirectTo: '/home',
     pathMatch: 'full'
   },
   {
     path: 'home',
-    component: LandingPageComponent,
+    loadChildren: () => import('./pages/page-lading-page/page-lading-page.module').then((module) => module.PageLadingPageModule)
   },
   {
-    path:'create-account',
-    component: CreateAccountComponent
+    path: 'confirm-service-area',
+    loadChildren: () => import('./pages/page-confirm-service-area/page-confirm-service-area.module').then((module) => module.PageConfirmServiceAreaModule)
   },
   {
-    path:'confirm-service-area',
-    component: ConfirmServiceAreaComponent
+    path: 'create-account',
+    loadChildren: () => import('./pages/page-create-account/page-create-account.module').then((module) => module.PageCreateAccountModule)
   },
   {
-    path:'success-submitted-data',
-    component: SuccessSubmittedDataComponent
+    path: 'success-submitted-data',
+    loadChildren: () => import('./pages/page-success-submitted-data/page-success-submitted-data.module').then((module) => module.PageSuccessSubmittedDataModule)
   }
 ];
 

@@ -1,0 +1,28 @@
+<div class="Grids margin-bottom-25">
+    <div class="Grid-6 Grid-sm-6 Grid-lg-6 Grid-xl-6">
+        <div class="text-left">
+            <span><strong>{{topLabelName}}</strong></span>
+        </div>
+    </div>
+    <div class="Grid-6 Grid-sm-6 Grid-lg-6 Grid-xl-6">
+        <div class="text-right">
+            <span class="Color-primary"><strong>{{controlName.value}} {{topLabelValue}}</strong></span>
+        </div>
+    </div>
+    <div class="Grid-12">
+        <div class="Field-control">
+            <mat-slider color="primary" [min]="minSlider" [max]="maxSlider" [formControl]="controlName" class="Input">
+            </mat-slider>
+        </div>
+    </div>
+    <div class="Grid-6 Grid-sm-6 Grid-lg-6 Grid-xl-6">
+        <div class="text-left">
+            <span>{{minVal}}</span>
+        </div>
+    </div>
+    <div class="Grid-6 Grid-sm-6 Grid-lg-6 Grid-xl-6">
+        <div class="text-right">
+            <span>{{maxVal}}</span>
+        </div>
+    </div>
+</div>

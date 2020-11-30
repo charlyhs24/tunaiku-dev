@@ -1,0 +1,20 @@
+<div class="Field MarginBottom">
+    <label class="Field-label">{{labelName}}</label>
+    <div class="validation">
+        <div class="Field-control">
+            <input [type]="type" [formControl]="controlName" class="Input" [placeholder]="placeholder" />
+        </div>
+        <div class="Color-danger" *ngIf="controlName.errors?.required">
+            {{inputName}} is required.
+        </div>
+        <div class="Color-danger" *ngIf="controlName.errors?.minlength">
+            {{inputName}} must be at least min {{controlName.errors.minlength.requiredLength}} characters long.
+        </div>
+        <div class="Color-danger" *ngIf="controlName.errors?.maxlength">
+            {{inputName}} must be at least max {{controlName.errors.maxlength.requiredLength}} characters long.
+        </div>
+        <div class="Color-danger" *ngIf="controlName.errors?.pattern">
+            {{inputName}} is alphabet only
+        </div>
+    </div>
+</div>

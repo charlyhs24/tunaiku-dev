@@ -1,0 +1,57 @@
+<main class="Content">
+    <div class="mobile-content">
+        <div class="container">
+            <app-mobile-navbar></app-mobile-navbar>
+            <div class="success-submitted-data MarginTop-2xlarge">
+                <div class="message-title MarginBottom">
+                    <img src="assets/sent-green.svg" alt="logo">
+                    <h1 class="Color-primary"><strong>Selamat, pengajuan pinjaman anda sudah terkirim !</strong></h1>
+                </div>
+                <div class="table" *ngIf="loanStat$ | async as loan">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>NAMA LENGKAP</th>
+                                <td>:{{loan.fullName}}</td>
+                            </tr>
+                            <tr>
+                                <th>NOMOR KTP</th>
+                                <td>:{{loan.numberOfKTP}}</td>
+                            </tr>
+                            <tr>
+                                <th>NOMOR HANDPHONE</th>
+                                <td>:{{loan.phoneNumber}}</td>
+                            </tr>
+                            <tr>
+                                <th>JUMLAH PINJAMAN</th>
+                                <td>: Rp. {{loan.loanAmount}}</td>
+                            </tr>
+                            <tr>
+                                <th>LAMA PINJAMAN</th>
+                                <td>:{{loan.loanTerm}} Bulan</td>
+                            </tr>
+                            <tr>
+                                <th>CICILAN PERBULAN</th>
+                                <td>: Rp. {{loan.payPerMonth}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="message-description MarginBottom-large">
+                    <p>Segera verifikasi akun anda agar pengajuan pinjamanmu semakin cepat kami proses. Kami akan
+                        mengirimkan SMS kode verifikasi ke nomor handphone yang anda daftarkan</p>
+                </div>
+                <div class="verification-account MarginBottom-large">
+                    <button [routerLink]="['/success-submitted-data']"
+                        class="Button Button--primary Button--fullWidth">Lanjut Isi
+                        Lanjut Verifikasi Akun</button>
+                </div>
+                <div class="sticky text-left">
+                    <h4 class="Color-primary"><strong>Tingkatkan Peluang Pinjaman</strong></h4>
+                    <p>Sertakan bukti penghasilan atau gaji dari internet banking untuk meningkatkan peluang pinjaman.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

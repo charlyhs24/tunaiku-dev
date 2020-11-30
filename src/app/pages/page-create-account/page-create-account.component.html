@@ -1,0 +1,26 @@
+<main class="Content">
+    <div class="mobile-content">
+        <div class="container">
+            <app-mobile-navbar [title]="title"></app-mobile-navbar>
+            <div class="total-loan" *ngIf="loanState$ | async as loan">
+                <app-total-loan [totalLoan]="loan.loanAmount" [payPerMonth]="loan.payPerMonth"
+                    [termOfLoan]="loan.loanTerm"></app-total-loan>
+            </div>
+            <div class="BottomBar">
+                <ul class="BottomBar-menu">
+                    <li class="BottomBar-menuItem">
+                        <a href="#">Buat Akun</a>
+                    </li>
+                    <li class="BottomBar-menuItem">
+                        <a href="#">Masuk Akun</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="create-account">
+                <div class="form-create-account">
+                    <app-form-create-account (submitEvent)="onSubmitCreateAccount($event)"></app-form-create-account>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
