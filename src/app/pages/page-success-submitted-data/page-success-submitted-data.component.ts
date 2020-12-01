@@ -11,7 +11,7 @@ import { NavbarService } from 'src/app/services/navbar/navbar.service';
 })
 export class PageSuccessSubmittedDataComponent implements OnInit {
   loanStat$: Observable<ILoanState>;
-  constructor(private loan: LoanService, private navbarService: NavbarService) { }
+  constructor(public loan: LoanService, private navbarService: NavbarService) { }
 
   ngOnInit() {
     this.navbarService.updateNavbarStatus(false);

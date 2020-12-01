@@ -9,22 +9,22 @@ import { NavbarService } from 'src/app/services/navbar/navbar.service';
 })
 export class MobileNavbarComponent implements OnInit {
   @Input('title') title: string;
-  constructor(private route: Router, private navbar: NavbarService) { }
+  constructor(public route: Router, private navbar: NavbarService) { }
 
   ngOnInit() {
   }
-  navigateHandler(){
+  navigateHandler() {
     switch (this.title) {
       case "Ajukan Pinjaman":
         this.route.navigate(['/confirm-service-area']);
         break;
       case "Area Layanan":
         this.navbar.updateNavbarStatus(true);
-        this.route.navigate(['home']);
+        this.route.navigate(['/home']);
         break;
       default:
         this.navbar.updateNavbarStatus(true);
-        this.route.navigate(['home']);
+        this.route.navigate(['/home']);
         break;
     }
   }

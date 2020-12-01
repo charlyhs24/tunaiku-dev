@@ -13,7 +13,7 @@ import { NavbarService } from 'src/app/services/navbar/navbar.service';
 export class PageCreateAccountComponent implements OnInit {
   title: string = "Ajukan Pinjaman";
   loanState$: Observable<ILoanState>;
-  constructor(private navbarService: NavbarService, private loan: LoanService, private route: Router) {
+  constructor(private navbarService: NavbarService, public loan: LoanService, public route: Router) {
     this.navbarService.updateNavbarStatus(false);
   }
   ngOnInit() {

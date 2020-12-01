@@ -10,15 +10,13 @@ import { NavbarService } from 'src/app/services/navbar/navbar.service';
 })
 export class PageConfirmServiceAreaComponent implements OnInit {
   title = "Area Layanan";
-  constructor(private loan: LoanService, private route: Router, private navbarService: NavbarService) {
+  constructor(public loan: LoanService, public route: Router, private navbarService: NavbarService) {
   }
   ngOnInit() {
     this.navbarService.updateNavbarStatus(false);
   }
   onSubmit(city: string) {
-    if (city) {
-      this.loan.addServiceArea(city);
-      this.route.navigate(['/create-account']);
-    }
+    this.loan.addServiceArea(city);
+    this.route.navigate(['/create-account']);
   }
 }
