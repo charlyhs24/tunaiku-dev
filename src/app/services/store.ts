@@ -7,7 +7,7 @@ export class Store<T> {
         this._state$ = new BehaviorSubject(initialState);
         this.state$ = this._state$.asObservable();
     }
-    get state(): T {
+    get state() {
         return this._state$.getValue();
     }
     setState(nextState: T): void {
