@@ -21,14 +21,8 @@ export class TunaikuSliderComponent implements OnInit {
   minSlider: number;
   @Input()
   maxSlider: number;
-  @Output()
-  changeEvent: EventEmitter<number>;
   constructor() {
-    this.changeEvent = new EventEmitter<number>();
   }
   ngOnInit() {
-  }
-  changeHandler() {
-    this.changeEvent.emit()
   }
 }
