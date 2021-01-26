@@ -9,7 +9,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MobileNavbarComponent } from './layout/mobile-navbar/mobile-navbar.component';
 import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [

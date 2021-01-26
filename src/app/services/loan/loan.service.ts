@@ -10,6 +10,7 @@ export class LoanService extends Store<LoanState> {
   constructor() {
     super(new LoanState());
   }
+  // untuk handle state , buat class baru (LoanStore)
   addUserData(fullName: string, numberOfKTP: string, phoneNumber: string, mediaSource: string): void {
     this.setState({
       ...this.state,
@@ -33,6 +34,9 @@ export class LoanService extends Store<LoanState> {
       serviceArea: serviceArea
     });
   }
+
+
+  // buat class baru loan service
   monthlyPaymentCalculation(loanAmount: number, period: number): number {
     return (loanAmount / period) * 1.04;
   }

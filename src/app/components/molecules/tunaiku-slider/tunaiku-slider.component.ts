@@ -1,4 +1,4 @@
-import { Component, DoCheck, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,7 @@ import { FormControl } from '@angular/forms';
   templateUrl: './tunaiku-slider.component.html',
   styleUrls: ['./tunaiku-slider.component.scss']
 })
-export class TunaikuSliderComponent implements OnInit {
+export class TunaikuSliderComponent {
   @Input()
   topLabelName: string;
   @Input()
@@ -22,7 +22,5 @@ export class TunaikuSliderComponent implements OnInit {
   @Input()
   maxSlider: number;
   constructor() {
-  }
-  ngOnInit() {
   }
 }

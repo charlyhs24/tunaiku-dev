@@ -41,6 +41,7 @@ describe('PageCreateAccountComponent', () => {
     component.onSubmitCreateAccount(MOCK_USER_ACCOUNT)
 
     // Assert: check the state equal to MOCK_USER_ACCOUNT 
+    // expect(component.loan.state).toEqual()
     expect(component.loan.state.mediaSource).toEqual(MOCK_USER_ACCOUNT.mediaSource);
     expect(component.loan.state.mediaSource).toEqual(MOCK_USER_ACCOUNT.mediaSource);
     expect(component.loan.state.numberOfKTP).toEqual(MOCK_USER_ACCOUNT.numberOfKTP);

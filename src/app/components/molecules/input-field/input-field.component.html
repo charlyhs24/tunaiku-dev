@@ -4,16 +4,16 @@
         <div class="Field-control">
             <input [type]="type" [formControl]="controlName" class="Input" [placeholder]="placeholder" />
         </div>
-        <div class="Color-danger" *ngIf="controlName.errors?.required">
+        <div class="Color-danger" *ngIf="controlName?.errors?.required">
             {{inputName}} is required.
         </div>
-        <div class="Color-danger" *ngIf="controlName.errors?.minlength">
+        <div class="Color-danger" *ngIf="controlName?.errors?.minlength">
             {{inputName}} must be at least min {{controlName.errors.minlength.requiredLength}} characters long.
         </div>
-        <div class="Color-danger" *ngIf="controlName.errors?.maxlength">
+        <div class="Color-danger" *ngIf="controlName?.errors?.maxlength">
             {{inputName}} must be at least max {{controlName.errors.maxlength.requiredLength}} characters long.
         </div>
-        <div class="Color-danger" *ngIf="controlName.errors?.pattern">
+        <div class="Color-danger" *ngIf="controlName?.errors?.pattern">
             {{inputName}} is alphabet only
         </div>
     </div>

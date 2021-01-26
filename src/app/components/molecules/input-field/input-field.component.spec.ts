@@ -18,7 +18,7 @@ describe('InputFieldComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(InputFieldComponent);
     component = fixture.componentInstance;
-    // fixture.detectChanges();
+    fixture.detectChanges();
   });
 
   it('should create', () => {
